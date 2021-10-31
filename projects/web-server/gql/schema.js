@@ -5,7 +5,7 @@ const schema = buildSchema(`
     id: ID
     name: String
     email: String
-    phoneNumber: String
+    score: Float
   }
   type Query {
     hello: String

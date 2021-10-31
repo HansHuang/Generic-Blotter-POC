@@ -22,7 +22,7 @@ async function* subUsers() {
     usersEvent.on("updated", handler);
     return () => { usersEvent.off("updated", handler) }
   });
-  
+
   for await (const data of usersIterator) {
     // console.log(data[0]);
     yield { users: data[0] }
@@ -36,6 +36,6 @@ function generateUsers(len) {
       id,
       name: randomStr(4),
       email: `${randomStr(5)}@mail.com`,
-      phoneNumber: randomStr(12),
+      score: (Math.random() * 500).toFixed(2),
     }))
 }

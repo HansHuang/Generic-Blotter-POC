@@ -3,7 +3,7 @@ export const queryUsers = `{
       id
       name
       email
-      phoneNumber
+      score
     }
    }`
 
@@ -14,7 +14,7 @@ subscription {
       id
       name
       email
-      phoneNumber
+      score
     }
  }
 `

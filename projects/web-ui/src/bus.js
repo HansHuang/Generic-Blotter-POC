@@ -29,7 +29,7 @@ async function Subscribe(gql, onData) {
     if (!onData) return;
 
     const onNext = function (data) {
-        console.log('Subscribe', data)
+        console.log('Subscribed Data')
         onData(data)
     };
 

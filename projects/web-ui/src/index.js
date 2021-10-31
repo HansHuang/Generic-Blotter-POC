@@ -7,7 +7,7 @@ let users = []
 const grid = new Grid({
   search: true,
   sort: true,
-  columns: ["Name", "Email", "Phone Number"],
+  columns: ["Name", "Email", "Score"],
   data: () => Query(queryUsers).then(x => (users = x.data.users)),
   className: {
     td: 'dataCell',

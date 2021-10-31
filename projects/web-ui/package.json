@@ -1,0 +1,17 @@
+{
+  "name": "web-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "esbuild src/index.js --bundle --minify --outfile=dist/app.js"
+  },
+  "keywords": [],
+  "author": "HansHuang",
+  "license": "MIT",
+  "devDependencies": {
+    "esbuild": "^0.13.12",
+    "graphql-ws": "^5.5.5",
+    "gridjs": "^5.0.2"
+  }
+}

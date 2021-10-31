@@ -1,0 +1,17 @@
+{
+  "name": "web-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index"
+  },
+  "keywords": [],
+  "author": "HansHuang",
+  "license": "MIT",
+  "dependencies": {
+    "events-to-async": "^1.0.1",
+    "graphql-ws": "^5.5.3",
+    "uwebsockets.js": "^19.0.0-docs"
+  }
+}

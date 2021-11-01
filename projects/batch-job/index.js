@@ -5,7 +5,7 @@ const { ObjectType, CacheConfiguration, SqlFieldsQuery, SqlQuery, IgniteClientCo
 
 const { randomStr } = require('../web-server/lib/util')
 
-const ENDPOINT = 'ip172-18-0-6-c5vaenvnjsv000fjerf0-47100.direct.labs.play-with-docker.com';
+const ENDPOINT = 'ip172-18-0-23-c5vilifnjsv000f3fs60-47100.direct.labs.play-with-docker.com';
 
 const USERS_CACHE_NAME = 'SqlQueryDemo_Users';
 
@@ -60,7 +60,7 @@ class SqlQueryEntriesDemo {
                 new SqlQuery('User', 'score > ? and score <= ?').
                     setArgs(300, 500));
 
-            console.log('SqlQuery results (score between 300 and 300):');
+            console.log('SqlQuery results (score between 300 and 500):');
             let user;
             do {
                 user = (await sqlCursor.getValue()).getValue();

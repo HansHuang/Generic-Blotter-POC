@@ -10,11 +10,11 @@ const ENDPOINT = 'ip172-18-0-23-c5vilifnjsv000f3fs60-47100.direct.labs.play-with
 const USERS_CACHE_NAME = 'SqlQueryDemo_Users';
 
 class User {
-    constructor(name = null, email = null, phoneNumber = null) {
+    constructor(name = null, email = null, score = null) {
         this.id = User.generateId();
         this.name = name;
         this.email = email;
-        this.phoneNumber = phoneNumber;
+        this.score = score;
     }
 
     static generateId() {
@@ -79,7 +79,7 @@ class SqlQueryEntriesDemo {
 
     async generateUsers(len) {
         while (len-- > 0) {
-            let user = new User(randomStr(4), `${randomStr(5)}@mail.com`, (Math.random() * 500).toFixed(2));
+            let user = new User(randomStr(4), `${randomStr(5)}@mail.com`, Number((Math.random() * 500).toFixed(2)));
             await this._cache.put(user.id, user);
         }
         console.log(`${len} users created`);

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home View</title>
+    <link rel="stylesheet" href="./app.css">
+</head>
+
+<body>
+    <div id="root">
+        <p>
+            <span id="name"></span>
+            <button id="btnAdd">Add View</button> &emsp; <button id="btnPop">Pop View</button>
+        </p>
+    </div>
+
+    <script>
+        (function () {
+            const views = []
+
+            document.getElementById('name').innerText = document.location.hash;
+
+            document.getElementById('btnAdd').onclick = function () {
+                const h = (visualViewport.height - 50) / 3,
+                    bounds = { x: 0, y: h * views.length + 50, width: visualViewport.width, height: h },
+                    view = api.addNewView(bounds, `https://www.bing.com/search?q=${views.length}`)
+
+                views.push(view)
+            }
+
+            document.getElementById('btnPop').onclick = function () {
+                views.pop()
+                api.popView(0)
+            }
+        })()
+    </script>
+</body>
+
+</html>
